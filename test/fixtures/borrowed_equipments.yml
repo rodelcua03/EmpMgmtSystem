@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  equipment_id: 
+  borrowedDate: 2013-12-16 22:32:07
+  returnedDate: 2013-12-16 22:32:07
+
+two:
+  equipment_id: 
+  borrowedDate: 2013-12-16 22:32:07
+  returnedDate: 2013-12-16 22:32:07

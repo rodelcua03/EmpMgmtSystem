@@ -1,0 +1,31 @@
+<h1>Listing borrowed_equipments</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Equipment</th>
+      <th>Borroweddate</th>
+      <th>Returneddate</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @borrowed_equipments.each do |borrowed_equipment| %>
+      <tr>
+        <td><%= borrowed_equipment.equipment %></td>
+        <td><%= borrowed_equipment.borrowedDate %></td>
+        <td><%= borrowed_equipment.returnedDate %></td>
+        <td><%= link_to 'Show', borrowed_equipment %></td>
+        <td><%= link_to 'Edit', edit_borrowed_equipment_path(borrowed_equipment) %></td>
+        <td><%= link_to 'Destroy', borrowed_equipment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Borrowed equipment', new_borrowed_equipment_path %>

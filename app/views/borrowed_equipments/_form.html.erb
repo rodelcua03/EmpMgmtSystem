@@ -1,0 +1,29 @@
+<%= form_for(@borrowed_equipment) do |f| %>
+  <% if @borrowed_equipment.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@borrowed_equipment.errors.count, "error") %> prohibited this borrowed_equipment from being saved:</h2>
+
+      <ul>
+      <% @borrowed_equipment.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :equipment_id %><br>
+    <%= f.select :equipment_id, options_for_select(Equipment.all.map{|e|[e.name]}) %>
+  </div>
+  <div class="field">
+    <%= f.label :borrowedDate %><br>
+    <%= f.datetime_select :borrowedDate, :ampm => true %>
+  </div>
+  <div class="field">
+    <%= f.label :returnedDate %><br>
+    <%= f.datetime_select :returnedDate %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

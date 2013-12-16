@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Equipment:</strong>
+  <%= @borrowed_equipment.equipment %>
+</p>
+
+<p>
+  <strong>Borroweddate:</strong>
+  <%= @borrowed_equipment.borrowedDate %>
+</p>
+
+<p>
+  <strong>Returneddate:</strong>
+  <%= @borrowed_equipment.returnedDate %>
+</p>
+
+<%= link_to 'Edit', edit_borrowed_equipment_path(@borrowed_equipment) %> |
+<%= link_to 'Back', borrowed_equipments_path %>
